@@ -73,6 +73,14 @@ data/processed/telco_customer_churn_cleaned.csv
 
 This processed file is also ignored by Git.
 
+The Phase 05 preprocessing workflow can also create local feature artifacts under:
+
+```text
+data/processed/features/
+```
+
+These files are ignored by Git and should be regenerated locally when needed.
+
 ## Raw-to-Processed Workflow
 
 After placing the raw CSV at `data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv`, run:
@@ -93,6 +101,26 @@ The script:
 - Saves the cleaned CSV locally under `data/processed/`.
 
 `customerID` is preserved for traceability, but it should not be used as a modeling feature in later phases.
+
+## Feature Preprocessing Workflow
+
+After creating `data/processed/telco_customer_churn_cleaned.csv`, run:
+
+```bash
+python scripts/prepare_features.py
+```
+
+The script:
+
+- Loads the cleaned dataset.
+- Separates `Churn` as the target.
+- Excludes `customerID` from modeling features.
+- Creates a reproducible stratified train/test split.
+- Fits the preprocessing pipeline only on the training features.
+- Transforms train and test features separately.
+- Saves local feature artifacts under `data/processed/features/`.
+
+The preprocessing pipeline uses median imputation and scaling for numeric columns, plus most-frequent imputation and one-hot encoding for categorical columns.
 
 ## Current Status
 

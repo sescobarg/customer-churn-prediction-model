@@ -49,8 +49,10 @@ customer-churn-prediction-model/
 |-- notebooks/
 |-- scripts/
 |   |-- prepare_data.py
+|   |-- prepare_features.py
 |-- src/
 |   |-- data/
+|   |-- features/
 |-- models/
 |-- reports/
 |   |-- figures/
@@ -64,10 +66,10 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 04 is complete. The project includes exploratory data analysis for the cleaned Telco Customer Churn dataset, saved figures, and an EDA summary report.
+Phase 05 is complete. The project includes a reusable preprocessing pipeline that separates features and target, excludes `customerID`, creates a stratified train/test split, and fits transformations only on training data.
 
-No machine learning models, trained model artifacts, preprocessing pipelines, prediction code, or model reports have been added yet.
+No machine learning models, trained model artifacts, prediction code, or model reports have been added yet.
 
 ## Next Step
 
-Phase 05 will focus on preprocessing and feature engineering for modeling.
+Phase 06 will focus on model training and model comparison.

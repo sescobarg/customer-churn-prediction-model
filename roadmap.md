@@ -32,11 +32,14 @@ This project will be implemented incrementally. Each phase should be validated b
 - Add a notebook with business-oriented EDA insights.
 - Add an EDA summary report.
 
-## Phase 05 - Preprocessing and Feature Engineering
+## Phase 05 - Preprocessing and Feature Engineering [Complete]
 
 - Split features and target.
 - Build a reproducible preprocessing pipeline.
 - Prepare encoded and scaled features for training.
+- Exclude `customerID` from modeling features.
+- Fit preprocessing only on train data and transform test data separately.
+- Add tests for feature/target separation and preprocessing behavior.
 
 ## Phase 06 - Model Training
 
