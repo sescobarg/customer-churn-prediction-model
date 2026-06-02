@@ -12,7 +12,9 @@ Telecom companies need to identify customers with a high probability of churn so
 
 ## Dataset
 
-The planned dataset is the Telco Customer Churn dataset. Raw data is not included in this repository during the initial setup phase. Download instructions and data handling notes are documented in `data/README.md`.
+The planned dataset is the Telco Customer Churn dataset. Raw data is not included in this repository and should not be committed to Git. Download instructions and data handling notes are documented in `data/README.md`.
+
+Additional business and dataset context is available in `docs/dataset_context.md`.
 
 ## Initial Scope
 
@@ -42,6 +44,8 @@ customer-churn-prediction-model/
 |   |-- raw/
 |   |-- processed/
 |   |-- README.md
+|-- docs/
+|   |-- dataset_context.md
 |-- notebooks/
 |-- src/
 |-- models/
@@ -56,8 +60,10 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 01 is the project initialization phase. No dataset, notebooks, machine learning code, trained models, or model reports have been added yet.
+Phase 02 is complete. The dataset source, business problem, target variable, expected columns, data handling rules, and future success metrics have been documented.
+
+No dataset, notebooks, machine learning code, trained models, or model reports have been added yet.
 
 ## Next Step
 
-Phase 02 will document the dataset and business context, including the target variable, expected columns, and success criteria.
+Phase 03 will focus on data cleaning after the dataset is downloaded locally by the user.

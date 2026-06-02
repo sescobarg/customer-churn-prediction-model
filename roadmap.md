@@ -2,18 +2,19 @@
 
 This project will be implemented incrementally. Each phase should be validated before moving to the next one.
 
-## Phase 01 - Project Initialization
+## Phase 01 - Project Initialization [Complete]
 
 - Create the base repository structure.
 - Add initial documentation.
 - Add `requirements.txt` and `.gitignore`.
 - Keep empty folders with `.gitkeep`.
 
-## Phase 02 - Dataset and Business Context
+## Phase 02 - Dataset and Business Context [Complete]
 
 - Document the Telco Customer Churn dataset source.
 - Define the target variable and expected columns.
 - Establish basic success criteria for the churn prediction task.
+- Document raw data placement and Git data handling rules.
 
 ## Phase 03 - Data Cleaning
 
