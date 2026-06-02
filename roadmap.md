@@ -16,11 +16,13 @@ This project will be implemented incrementally. Each phase should be validated b
 - Establish basic success criteria for the churn prediction task.
 - Document raw data placement and Git data handling rules.
 
-## Phase 03 - Data Cleaning
+## Phase 03 - Data Cleaning [Complete]
 
 - Inspect missing values, duplicates, and data types.
 - Handle `TotalCharges` conversion.
 - Prepare reusable cleaning logic in `src/`.
+- Add a preparation script that saves the cleaned dataset locally.
+- Add basic tests for cleaning behavior.
 
 ## Phase 04 - Exploratory Data Analysis
 

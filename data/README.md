@@ -65,6 +65,35 @@ For churn detection, recall for the churn class is especially important because 
 
 Processed files, when created in later phases, should be placed in `data/processed/`. They should only be committed if the license and privacy constraints are clear.
 
+The Phase 03 cleaning workflow creates this local processed file:
+
+```text
+data/processed/telco_customer_churn_cleaned.csv
+```
+
+This processed file is also ignored by Git.
+
+## Raw-to-Processed Workflow
+
+After placing the raw CSV at `data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv`, run:
+
+```bash
+python scripts/prepare_data.py
+```
+
+The script:
+
+- Loads the raw Telco Customer Churn CSV.
+- Validates required columns.
+- Removes fully duplicated rows.
+- Converts `TotalCharges` to numeric.
+- Fills blank `TotalCharges` values with `0.0` when `tenure == 0`.
+- Removes rows with invalid `TotalCharges` values that cannot be explained by zero tenure.
+- Converts `Churn` from `Yes` / `No` into `1` / `0`.
+- Saves the cleaned CSV locally under `data/processed/`.
+
+`customerID` is preserved for traceability, but it should not be used as a modeling feature in later phases.
+
 ## Current Status
 
-No dataset has been downloaded or added in Phase 02.
+The raw dataset and cleaned dataset can exist locally, but both remain ignored by Git.

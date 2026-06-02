@@ -47,7 +47,10 @@ customer-churn-prediction-model/
 |-- docs/
 |   |-- dataset_context.md
 |-- notebooks/
+|-- scripts/
+|   |-- prepare_data.py
 |-- src/
+|   |-- data/
 |-- models/
 |-- reports/
 |   |-- figures/
@@ -60,10 +63,10 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 02 is complete. The dataset source, business problem, target variable, expected columns, data handling rules, and future success metrics have been documented.
+Phase 03 is complete. The project includes a reusable raw-to-processed data cleaning workflow for the Telco Customer Churn dataset.
 
-No dataset, notebooks, machine learning code, trained models, or model reports have been added yet.
+No notebooks, exploratory charts, machine learning models, trained model artifacts, or model reports have been added yet.
 
 ## Next Step
 
-Phase 03 will focus on data cleaning after the dataset is downloaded locally by the user.
+Phase 04 will focus on exploratory data analysis.
