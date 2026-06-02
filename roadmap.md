@@ -24,11 +24,13 @@ This project will be implemented incrementally. Each phase should be validated b
 - Add a preparation script that saves the cleaned dataset locally.
 - Add basic tests for cleaning behavior.
 
-## Phase 04 - Exploratory Data Analysis
+## Phase 04 - Exploratory Data Analysis [Complete]
 
 - Analyze churn distribution.
 - Explore numeric and categorical relationships.
 - Save relevant figures under `reports/figures/`.
+- Add a notebook with business-oriented EDA insights.
+- Add an EDA summary report.
 
 ## Phase 05 - Preprocessing and Feature Engineering
 

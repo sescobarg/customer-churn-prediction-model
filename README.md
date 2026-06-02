@@ -54,6 +54,7 @@ customer-churn-prediction-model/
 |-- models/
 |-- reports/
 |   |-- figures/
+|   |-- eda_summary.md
 |-- tests/
 |-- README.md
 |-- requirements.txt
@@ -63,10 +64,10 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 03 is complete. The project includes a reusable raw-to-processed data cleaning workflow for the Telco Customer Churn dataset.
+Phase 04 is complete. The project includes exploratory data analysis for the cleaned Telco Customer Churn dataset, saved figures, and an EDA summary report.
 
-No notebooks, exploratory charts, machine learning models, trained model artifacts, or model reports have been added yet.
+No machine learning models, trained model artifacts, preprocessing pipelines, prediction code, or model reports have been added yet.
 
 ## Next Step
 
-Phase 04 will focus on exploratory data analysis.
+Phase 05 will focus on preprocessing and feature engineering for modeling.
