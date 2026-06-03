@@ -50,13 +50,16 @@ customer-churn-prediction-model/
 |-- scripts/
 |   |-- prepare_data.py
 |   |-- prepare_features.py
+|   |-- train_baselines.py
 |-- src/
 |   |-- data/
 |   |-- features/
+|   |-- models/
 |-- models/
 |-- reports/
 |   |-- figures/
 |   |-- eda_summary.md
+|   |-- model_training_summary.md
 |-- tests/
 |-- README.md
 |-- requirements.txt
@@ -66,10 +69,30 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 05 is complete. The project includes a reusable preprocessing pipeline that separates features and target, excludes `customerID`, creates a stratified train/test split, and fits transformations only on training data.
+Phase 06 is complete. The project includes baseline model training with full scikit-learn pipelines and cross-validation on the training split.
 
-No machine learning models, trained model artifacts, prediction code, or model reports have been added yet.
+No final model evaluation, prediction code, deployment, or final business conclusions have been added yet.
+
+## How to Run
+
+Prepare the cleaned dataset:
+
+```bash
+python scripts/prepare_data.py
+```
+
+Prepare local feature artifacts:
+
+```bash
+python scripts/prepare_features.py
+```
+
+Train and compare baseline models:
+
+```bash
+python scripts/train_baselines.py
+```
 
 ## Next Step
 
-Phase 06 will focus on model training and model comparison.
+Phase 07 will focus on held-out model evaluation.

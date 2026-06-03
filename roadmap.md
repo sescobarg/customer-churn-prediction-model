@@ -41,10 +41,13 @@ This project will be implemented incrementally. Each phase should be validated b
 - Fit preprocessing only on train data and transform test data separately.
 - Add tests for feature/target separation and preprocessing behavior.
 
-## Phase 06 - Model Training
+## Phase 06 - Model Training [Complete]
 
 - Train baseline and tree-based classification models.
 - Compare initial model performance.
+- Use full scikit-learn pipelines with preprocessing and estimators.
+- Compare baselines with cross-validation on the training split.
+- Add a model training summary and comparison table.
 
 ## Phase 07 - Model Evaluation
 
