@@ -149,9 +149,9 @@ def write_model_comparison_report(
         "",
         "Because churn detection cares about identifying at-risk customers, recall and ROC-AUC should remain important during Phase 07 evaluation.",
         "",
-        "## Next Step",
+        "## Status Note",
         "",
-        "Phase 07 should evaluate the selected candidate models on the held-out test set with classification metrics and confusion matrix.",
+        "The selected logistic regression baseline was later evaluated once on the held-out test set in Phase 07.",
         "",
     ]
 

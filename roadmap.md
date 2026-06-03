@@ -71,7 +71,18 @@ This project will be implemented incrementally. Each phase should be validated b
 - Add a lightweight validation script for tracked project checks.
 - Confirm data, feature artifacts, virtual environments, and model binaries stay out of Git.
 
-## Phase 10 - Portfolio Polish
+## Phase 10 - Portfolio Polish [Complete]
 
 - Review documentation, notebooks, code, and repository consistency.
 - Prepare the project for GitHub portfolio presentation.
+- Polish the README for portfolio review.
+- Add a final project summary.
+- Validate tests, reports, figures, ignored data files, and Git status.
+
+## Final Checklist
+
+- All phases from 01 through 10 are complete.
+- Raw data, processed data, feature artifacts, virtual environments, caches, and model binaries are not committed.
+- README describes the business problem, methodology, commands, results, limitations, and next steps.
+- Reports include EDA, baseline training, held-out evaluation, interpretation, recommendations, and final summary.
+- Validation passes with `python scripts/run_checks.py`.

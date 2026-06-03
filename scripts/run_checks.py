@@ -17,6 +17,7 @@ EXPECTED_TRACKED_FILES = [
     "reports/model_evaluation_summary.md",
     "reports/model_interpretation.md",
     "reports/business_recommendations.md",
+    "reports/final_project_summary.md",
     "scripts/prepare_data.py",
     "scripts/prepare_features.py",
     "scripts/train_baselines.py",

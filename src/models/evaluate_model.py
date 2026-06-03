@@ -167,9 +167,9 @@ def write_evaluation_report(
         "- `reports/figures/roc_curve.png`",
         "- `reports/figures/precision_recall_curve.png`",
         "",
-        "## Next Step",
+        "## Status Note",
         "",
-        "Phase 08 should interpret model behavior, limitations, and business recommendations without retuning on the held-out test set.",
+        "Phase 08 added model interpretation, limitations, and business recommendations without retuning on the held-out test set.",
         "",
     ]
     path.write_text("\n".join(markdown), encoding="utf-8")
