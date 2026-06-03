@@ -50,6 +50,7 @@ customer-churn-prediction-model/
 |-- scripts/
 |   |-- prepare_data.py
 |   |-- prepare_features.py
+|   |-- evaluate_model.py
 |   |-- train_baselines.py
 |-- src/
 |   |-- data/
@@ -59,6 +60,7 @@ customer-churn-prediction-model/
 |-- reports/
 |   |-- figures/
 |   |-- eda_summary.md
+|   |-- model_evaluation_summary.md
 |   |-- model_training_summary.md
 |-- tests/
 |-- README.md
@@ -69,9 +71,9 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 06 is complete. The project includes baseline model training with full scikit-learn pipelines and cross-validation on the training split.
+Phase 07 is complete. The project includes held-out test evaluation for the selected baseline model, evaluation figures, and a model evaluation summary.
 
-No final model evaluation, prediction code, deployment, or final business conclusions have been added yet.
+No prediction code, deployment, or final business conclusions have been added yet.
 
 ## How to Run
 
@@ -93,6 +95,12 @@ Train and compare baseline models:
 python scripts/train_baselines.py
 ```
 
+Evaluate the selected baseline model on the held-out test set:
+
+```bash
+python scripts/evaluate_model.py
+```
+
 ## Next Step
 
-Phase 07 will focus on held-out model evaluation.
+Phase 08 will focus on interpretation, limitations, and business conclusions.

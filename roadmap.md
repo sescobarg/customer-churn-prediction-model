@@ -49,10 +49,13 @@ This project will be implemented incrementally. Each phase should be validated b
 - Compare baselines with cross-validation on the training split.
 - Add a model training summary and comparison table.
 
-## Phase 07 - Model Evaluation
+## Phase 07 - Model Evaluation [Complete]
 
 - Evaluate accuracy, precision, recall, F1-score, ROC-AUC, and confusion matrix.
 - Document results in a model report.
+- Evaluate the selected baseline once on the held-out test set.
+- Generate confusion matrix, ROC curve, and precision-recall curve figures.
+- Add reusable model evaluation logic and tests.
 
 ## Phase 08 - Interpretation and Business Conclusions
 
