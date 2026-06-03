@@ -59,8 +59,10 @@ customer-churn-prediction-model/
 |-- models/
 |-- reports/
 |   |-- figures/
+|   |-- business_recommendations.md
 |   |-- eda_summary.md
 |   |-- model_evaluation_summary.md
+|   |-- model_interpretation.md
 |   |-- model_training_summary.md
 |-- tests/
 |-- README.md
@@ -71,9 +73,22 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 07 is complete. The project includes held-out test evaluation for the selected baseline model, evaluation figures, and a model evaluation summary.
+Phase 08 is complete. The project includes model interpretation, limitations, and business recommendations based on EDA, baseline training, and held-out evaluation.
 
-No prediction code, deployment, or final business conclusions have been added yet.
+No prediction code, deployment, API, app, or dashboard has been added yet.
+
+## Key Findings
+
+- The selected logistic regression baseline achieved held-out recall of `0.7834` and ROC-AUC of `0.8416`.
+- The model caught `293` churn customers and missed `81` churn customers on the held-out test set.
+- False negatives are the main business risk because they represent churn customers who would not be flagged for retention.
+- False positives may be acceptable when retention outreach is less expensive than losing a customer.
+- EDA and model interpretation point to risk indicators such as early tenure, month-to-month contracts, fiber optic service, electronic check payment, and limited support/security services.
+
+Interpretation reports:
+
+- `reports/model_interpretation.md`
+- `reports/business_recommendations.md`
 
 ## How to Run
 
@@ -103,4 +118,4 @@ python scripts/evaluate_model.py
 
 ## Next Step
 
-Phase 08 will focus on interpretation, limitations, and business conclusions.
+Phase 09 will focus on expanding basic tests and validation coverage.
