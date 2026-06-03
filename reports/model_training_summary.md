@@ -25,8 +25,8 @@ The held-out test set is not used for model selection in this phase. Final evalu
 - Best ROC-AUC: `logistic_regression` with ROC-AUC `0.8460`.
 - Recall for that model: `0.8013`.
 
-Because churn detection cares about identifying at-risk customers, recall and ROC-AUC should remain important during Phase 07 evaluation.
+Because churn detection cares about identifying at-risk customers, recall and ROC-AUC remained important during held-out evaluation.
 
-## Next Step
+## Status Note
 
-Phase 07 should evaluate the selected candidate models on the held-out test set with classification metrics and confusion matrix.
+The selected logistic regression baseline was later evaluated once on the held-out test set in Phase 07.

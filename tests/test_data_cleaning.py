@@ -69,6 +69,35 @@ class TestDataCleaning(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "Missing required columns"):
             validate_required_columns(raw_data)
 
+    def test_clean_telco_churn_data_rejects_unexpected_target_values(self) -> None:
+        raw_data = pd.DataFrame(
+            {
+                "customerID": ["A"],
+                "tenure": [1],
+                "MonthlyCharges": [29.85],
+                "TotalCharges": ["29.85"],
+                "Churn": ["Maybe"],
+            }
+        )
+
+        with self.assertRaisesRegex(ValueError, "Unexpected Churn values"):
+            clean_telco_churn_data(raw_data)
+
+    def test_clean_telco_churn_data_reports_remaining_missing_values(self) -> None:
+        raw_data = pd.DataFrame(
+            {
+                "customerID": ["A"],
+                "tenure": [1],
+                "MonthlyCharges": [None],
+                "TotalCharges": ["29.85"],
+                "Churn": ["No"],
+            }
+        )
+
+        _, report = clean_telco_churn_data(raw_data)
+
+        self.assertEqual(report.missing_values_after_cleaning, {"MonthlyCharges": 1})
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -65,9 +65,11 @@ This project will be implemented incrementally. Each phase should be validated b
 - Explain false positives, false negatives, recall, and ROC-AUC.
 - Add model interpretation and business recommendation reports.
 
-## Phase 09 - Basic Testing
+## Phase 09 - Basic Testing [Complete]
 
-- Add tests for cleaning, preprocessing, prediction, and expected columns.
+- Add tests for cleaning, loading, preprocessing, training, evaluation, report generation, and expected columns.
+- Add a lightweight validation script for tracked project checks.
+- Confirm data, feature artifacts, virtual environments, and model binaries stay out of Git.
 
 ## Phase 10 - Portfolio Polish
 

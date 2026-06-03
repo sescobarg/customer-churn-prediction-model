@@ -8,6 +8,7 @@ from src.features.build_features import (
     create_feature_target_split,
     create_train_test_split,
     fit_transform_train_test,
+    get_feature_columns,
 )
 
 
@@ -60,6 +61,27 @@ class TestFeaturePreprocessing(unittest.TestCase):
 
         with self.assertRaisesRegex(ValueError, "Missing target column"):
             create_feature_target_split(data)
+
+    def test_create_train_test_split_is_reproducible(self) -> None:
+        first_split = create_train_test_split(self.data, test_size=0.25, random_state=42)
+        second_split = create_train_test_split(self.data, test_size=0.25, random_state=42)
+
+        self.assertEqual(list(first_split.X_train.index), list(second_split.X_train.index))
+        self.assertEqual(list(first_split.X_test.index), list(second_split.X_test.index))
+        self.assertEqual(list(first_split.y_train.index), list(second_split.y_train.index))
+        self.assertEqual(list(first_split.y_test.index), list(second_split.y_test.index))
+
+    def test_get_feature_columns_identifies_numeric_and_categorical_columns(self) -> None:
+        X, _ = create_feature_target_split(self.data)
+
+        numeric_columns, categorical_columns = get_feature_columns(X)
+
+        self.assertIn("tenure", numeric_columns)
+        self.assertIn("MonthlyCharges", numeric_columns)
+        self.assertIn("Contract", categorical_columns)
+        self.assertIn("InternetService", categorical_columns)
+        self.assertNotIn(ID_COLUMN, numeric_columns + categorical_columns)
+        self.assertNotIn(TARGET_COLUMN, numeric_columns + categorical_columns)
 
 
 if __name__ == "__main__":

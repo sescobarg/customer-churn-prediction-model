@@ -16,13 +16,13 @@ The planned dataset is the Telco Customer Churn dataset. Raw data is not include
 
 Additional business and dataset context is available in `docs/dataset_context.md`.
 
-## Initial Scope
+## Project Scope
 
 - Project structure and documentation.
 - Dataset instructions.
-- Future exploratory notebooks.
-- Future reusable Python modules for cleaning, preprocessing, training, evaluation, and prediction.
-- Future basic tests and validation checks.
+- Exploratory notebook and figures.
+- Reusable Python modules for cleaning, preprocessing, training, evaluation, and interpretation support.
+- Basic tests and validation checks.
 
 ## Technologies
 
@@ -51,6 +51,7 @@ customer-churn-prediction-model/
 |   |-- prepare_data.py
 |   |-- prepare_features.py
 |   |-- evaluate_model.py
+|   |-- run_checks.py
 |   |-- train_baselines.py
 |-- src/
 |   |-- data/
@@ -73,7 +74,7 @@ customer-churn-prediction-model/
 
 ## Current Status
 
-Phase 08 is complete. The project includes model interpretation, limitations, and business recommendations based on EDA, baseline training, and held-out evaluation.
+Phase 09 is complete. The project includes expanded tests and a lightweight validation script for tracked project checks.
 
 No prediction code, deployment, API, app, or dashboard has been added yet.
 
@@ -116,6 +117,12 @@ Evaluate the selected baseline model on the held-out test set:
 python scripts/evaluate_model.py
 ```
 
+Run project quality checks:
+
+```bash
+python scripts/run_checks.py
+```
+
 ## Next Step
 
-Phase 09 will focus on expanding basic tests and validation coverage.
+Phase 10 will focus on final portfolio polish.

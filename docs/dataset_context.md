@@ -74,6 +74,6 @@ Recall for churn will be especially important because missing a customer who is 
 - Keep processed datasets in `data/processed/` only when created in later phases.
 - Commit only documentation, code, tests, and small safe artifacts unless data permissions are clear.
 
-## Phase 02 Status
+## Project Status Note
 
-Dataset and business context have been documented. No dataset has been downloaded, cleaned, or modeled yet.
+Dataset and business context were documented in Phase 02. Later phases added local data cleaning, EDA, preprocessing, baseline training, held-out evaluation, interpretation, and validation coverage.

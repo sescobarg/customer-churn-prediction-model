@@ -1,4 +1,6 @@
 import unittest
+import tempfile
+from pathlib import Path
 
 import pandas as pd
 from sklearn.dummy import DummyClassifier
@@ -15,6 +17,7 @@ from src.models.train_model import (
     build_training_pipeline,
     compare_baseline_models,
     fit_baseline_pipelines,
+    write_model_comparison_report,
 )
 
 
@@ -79,6 +82,32 @@ class TestModelTraining(unittest.TestCase):
         self.assertTrue(hasattr(pipeline.named_steps["preprocessor"], "transformers_"))
         self.assertNotIn(ID_COLUMN, self.split.X_train.columns)
         self.assertNotIn(TARGET_COLUMN, self.split.X_train.columns)
+
+    def test_write_model_comparison_report_creates_markdown_file(self) -> None:
+        results = pd.DataFrame(
+            {
+                "model": ["logistic_regression"],
+                "roc_auc_mean": [0.84],
+                "roc_auc_std": [0.01],
+                "accuracy_mean": [0.74],
+                "accuracy_std": [0.01],
+                "precision_mean": [0.50],
+                "precision_std": [0.02],
+                "recall_mean": [0.78],
+                "recall_std": [0.03],
+                "f1_mean": [0.61],
+                "f1_std": [0.02],
+            }
+        )
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            output_path = Path(temp_dir) / "training.md"
+            write_model_comparison_report(results, output_path)
+            content = output_path.read_text(encoding="utf-8")
+
+        self.assertIn("Baseline Model Training Summary", content)
+        self.assertIn("logistic_regression", content)
+        self.assertIn("ROC-AUC", content)
 
 
 if __name__ == "__main__":

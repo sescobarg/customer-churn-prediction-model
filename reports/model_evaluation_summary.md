@@ -53,6 +53,6 @@ weighted avg       0.80      0.74      0.75      1409
 - `reports/figures/roc_curve.png`
 - `reports/figures/precision_recall_curve.png`
 
-## Next Step
+## Status Note
 
-Phase 08 should interpret model behavior, limitations, and business recommendations without retuning on the held-out test set.
+Phase 08 added model interpretation, limitations, and business recommendations without retuning on the held-out test set.

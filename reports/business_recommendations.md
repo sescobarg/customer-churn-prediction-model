@@ -109,7 +109,7 @@ Before using this model operationally, the business should estimate:
 - It does not validate whether recommended interventions actually reduce churn.
 - It does not include an operational feedback loop for future retraining.
 
-## Recommended Next Analytical Steps
+## Recommended Future Analytical Steps
 
 - Evaluate business impact using expected retention value and outreach cost.
 - Add feature importance or coefficient interpretation to the final portfolio README.
@@ -118,4 +118,4 @@ Before using this model operationally, the business should estimate:
 
 ## Bottom Line
 
-The model is useful as a churn risk prioritization baseline. It can help focus attention on customers most likely to leave, especially early-tenure and month-to-month customers. The next phase should present these findings clearly as portfolio-ready project conclusions while staying honest about limitations.
+The model is useful as a churn risk prioritization baseline. It can help focus attention on customers most likely to leave, especially early-tenure and month-to-month customers. Future portfolio polish should present these findings clearly while staying honest about limitations.

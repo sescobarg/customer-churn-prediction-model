@@ -13,7 +13,7 @@ Recommended source:
 Suggested local file location after download:
 
 ```text
-data/raw/Telco-Customer-Churn.csv
+data/raw/WA_Fn-UseC_-Telco-Customer-Churn.csv
 ```
 
 If the downloaded file has a different name, keep it inside `data/raw/` and update later notebooks or scripts accordingly.
@@ -124,4 +124,4 @@ The preprocessing pipeline uses median imputation and scaling for numeric column
 
 ## Current Status
 
-The raw dataset and cleaned dataset can exist locally, but both remain ignored by Git.
+The raw dataset, cleaned dataset, and feature artifacts can exist locally, but they remain ignored by Git.

@@ -95,6 +95,6 @@ The notebook saves the following figures:
 - Fiber optic and electronic check customers deserve deeper investigation.
 - Later modeling should test whether tenure, contract type, monthly charges, internet service, and payment method are strong predictors.
 
-## Recommended Next Phase
+## Status Note
 
-Phase 05 should build preprocessing and feature engineering logic for modeling. It should separate the target from features, preserve `customerID` only for traceability, encode categorical variables, scale numeric variables where appropriate, and prepare a train/test split.
+The EDA findings informed later preprocessing, baseline training, held-out evaluation, and interpretation phases.
